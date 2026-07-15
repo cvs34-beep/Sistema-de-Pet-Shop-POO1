@@ -1,1 +1,1 @@
-oiiii = 1
+print("Olá, GitHub!")
