@@ -50,12 +50,10 @@ def menu_principal():
             menu_clientes()
 
         elif opcao == "2":
-            print("\n>>> Menu de Pets em construção...")
-            input("\nPressione ENTER para continuar...")
+            menu_pets()
 
         elif opcao == "3":
-            print("\n>>> Menu de Serviços em construção...")
-            input("\nPressione ENTER para continuar...")
+            menu_servicos()
 
         elif opcao == "0":
             print("\nSistema encerrado. Até logo!")
@@ -64,3 +62,75 @@ def menu_principal():
         else:
             print("\nOpção inválida!")
             input("\nPressione ENTER para continuar...")
+
+def menu_pets():
+    while True:
+        print("\n" + "=" * 40)
+        print("           MENU PETS")
+        print("=" * 40)
+        print("1 - Cadastrar Pet")
+        print("2 - Listar Pets")
+        print("3 - Atualizar Pet")
+        print("4 - Excluir Pet")
+        print("0 - Voltar")
+
+        opcao = input("\nEscolha uma opção: ")
+
+        if opcao == "1":
+            print("\n>>> Cadastro de pets em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "2":
+            print("\n>>> Listagem de pets em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "3":
+            print("\n>>> Atualização de pets em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "4":
+            print("\n>>> Exclusão de pets em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "0":
+            break
+
+        else:
+            print("\nOpção inválida!")
+            input("\nPressione ENTER para continuar...")
+
+def menu_servicos():
+    while True:
+        print("\n" + "=" * 40)
+        print("        MENU SERVIÇOS")
+        print("=" * 40)
+        print("1 - Cadastrar Serviço")
+        print("2 - Listar Serviços")
+        print("3 - Atualizar Serviço")
+        print("4 - Excluir Serviço")
+        print("0 - Voltar")
+
+        opcao = input("\nEscolha uma opção: ")
+
+        if opcao == "1":
+            print("\n>>> Cadastro de serviços em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "2":
+            print("\n>>> Listagem de serviços em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "3":
+            print("\n>>> Atualização de serviços em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "4":
+            print("\n>>> Exclusão de serviços em construção...")
+            input("\nPressione ENTER para continuar...")
+
+        elif opcao == "0":
+            break
+
+        else:
+            print("\nOpção inválida!")
+            input("\nPressione ENTER para continuar...")           
