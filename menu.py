@@ -1,3 +1,6 @@
+from cliente import Cliente
+from arquivo import salvar_cliente
+
 def menu_clientes():
     while True:
         print("\n" + "=" * 40)
@@ -12,8 +15,7 @@ def menu_clientes():
         opcao = input("\nEscolha uma opção: ")
 
         if opcao == "1":
-            print("\n>>> Cadastro de clientes em construção...")
-            input("\nPressione ENTER para continuar...")
+            cadastrar_cliente()
 
         elif opcao == "2":
             print("\n>>> Listagem de clientes em construção...")
@@ -33,6 +35,27 @@ def menu_clientes():
         else:
             print("\nOpção inválida!")
             input("\nPressione ENTER para continuar...")
+
+def cadastrar_cliente():
+
+    print("\n===== CADASTRO DE CLIENTE =====")
+
+    id_cliente = input("ID: ")
+    nome = input("Nome: ")
+    telefone = input("Telefone: ")
+
+    cliente = Cliente(
+        id_cliente,
+        nome,
+        telefone
+    )
+
+    salvar_cliente(cliente)
+
+    print("\nCliente cadastrado com sucesso!")
+
+    input("\nPressione ENTER para continuar...")
+
 
 def menu_principal():
     while True:
