@@ -14,4 +14,14 @@ class Pet:
         print(f"Raça: {self.raca}")
         print(f"Idade: {self.idade}")
         print(f"Tutor: {self.tutor}")
-        
+
+    def para_lista(self):
+        return [
+            self.id_pet,
+            self.nome,
+            self.especie,
+            self.raca,
+            self.idade,
+            self.tutor
+        ]
+    

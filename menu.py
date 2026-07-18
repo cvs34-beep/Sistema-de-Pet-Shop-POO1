@@ -1,3 +1,5 @@
+from pet import Pet
+from arquivo import salvar_pet
 from cliente import Cliente
 from arquivo import salvar_cliente
 
@@ -100,8 +102,7 @@ def menu_pets():
         opcao = input("\nEscolha uma opção: ")
 
         if opcao == "1":
-            print("\n>>> Cadastro de pets em construção...")
-            input("\nPressione ENTER para continuar...")
+            cadastrar_pet()
 
         elif opcao == "2":
             print("\n>>> Listagem de pets em construção...")
@@ -121,6 +122,31 @@ def menu_pets():
         else:
             print("\nOpção inválida!")
             input("\nPressione ENTER para continuar...")
+def cadastrar_pet():
+
+    print("\n===== CADASTRO DE PET =====")
+
+    id_pet = input("ID: ")
+    nome = input("Nome: ")
+    especie = input("Espécie: ")
+    raca = input("Raça: ")
+    idade = input("Idade: ")
+    tutor = input("Tutor: ")
+
+    pet = Pet(
+        id_pet,
+        nome,
+        especie,
+        raca,
+        idade,
+        tutor
+    )
+
+    salvar_pet(pet)
+
+    print("\nPet cadastrado com sucesso!")
+
+    input("\nPressione ENTER para continuar...")
 
 def menu_servicos():
     while True:
