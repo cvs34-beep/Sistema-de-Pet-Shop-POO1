@@ -5,10 +5,14 @@ class Cliente:
         self.telefone = telefone
 
     def exibir_dados(self):
-        print("\n===== CLIENTE =====")
+        print("\n===== DADOS DO CLIENTE =====")
         print(f"ID: {self.id_cliente}")
         print(f"Nome: {self.nome}")
         print(f"Telefone: {self.telefone}")
+
+    def atualizar(self, nome, telefone):
+        self.nome = nome
+        self.telefone = telefone
 
     def para_lista(self):
         return [
@@ -16,3 +20,11 @@ class Cliente:
             self.nome,
             self.telefone
         ]
+
+    @classmethod
+    def de_lista(cls, dados):
+        return cls(
+            dados[0],
+            dados[1],
+            dados[2]
+        )
