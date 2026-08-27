@@ -1,23 +1,35 @@
 import tkinter as tk
 from tkinter import messagebox
 
-from INTERFACE.tela_clientes import abrir_tela_clientes
+from .tela_clientes import abrir_tela_clientes
+from .tela_pets import abrir_tela_pets
+from .tela_servicos import abrir_tela_servicos
+
+
+# ==============================
+# CORES DO SISTEMA
+# ==============================
+
+FUNDO = "#FCE4EC"
+ROSA = "#F48FB1"
+ROSA_ESCURO = "#EC407A"
+TEXTO = "#880E4F"
+
+
+# ==============================
+# FUNÇÕES
+# ==============================
 
 def abrir_clientes():
     abrir_tela_clientes()
 
+
 def abrir_pets():
-    messagebox.showinfo(
-        "Pets",
-        "A tela de Pets será desenvolvida em breve!"
-    )
+    abrir_tela_pets()
 
 
 def abrir_servicos():
-    messagebox.showinfo(
-        "Serviços",
-        "A tela de Serviços será desenvolvida em breve!"
-    )
+    abrir_tela_servicos()
 
 
 def sair():
@@ -30,105 +42,122 @@ def sair():
         janela.destroy()
 
 
-# ==========================
+# ==============================
 # JANELA PRINCIPAL
-# ==========================
+# ==============================
 
 janela = tk.Tk()
 
 janela.title("Sistema Pet Shop")
-janela.geometry("500x500")
+janela.geometry("500x600")
 janela.resizable(False, False)
+janela.configure(bg=FUNDO)
 
 
-# ==========================
+# ==============================
 # TÍTULO
-# ==========================
+# ==============================
 
-titulo = tk.Label(
+tk.Label(
     janela,
-    text="SISTEMA PET SHOP",
-    font=("Arial", 24, "bold")
-)
+    text="🐾 SISTEMA PET SHOP 🐾",
+    font=("Arial", 24, "bold"),
+    bg=FUNDO,
+    fg=TEXTO
+).pack(pady=(45, 10))
 
-titulo.pack(pady=40)
 
-
-subtitulo = tk.Label(
+tk.Label(
     janela,
     text="Gerenciamento de Pet Shop",
-    font=("Arial", 12)
-)
+    font=("Arial", 12),
+    bg=FUNDO,
+    fg=TEXTO
+).pack(pady=(0, 35))
 
-subtitulo.pack(pady=5)
 
-
-# ==========================
+# ==============================
 # BOTÃO CLIENTES
-# ==========================
+# ==============================
 
-botao_clientes = tk.Button(
+tk.Button(
     janela,
     text="CLIENTES",
     font=("Arial", 14, "bold"),
-    width=20,
+    width=22,
     height=2,
+    bg=ROSA,
+    fg="white",
+    activebackground=ROSA_ESCURO,
+    activeforeground="white",
+    relief="flat",
+    cursor="hand2",
     command=abrir_clientes
-)
-
-botao_clientes.pack(pady=10)
+).pack(pady=10)
 
 
-# ==========================
+# ==============================
 # BOTÃO PETS
-# ==========================
+# ==============================
 
-botao_pets = tk.Button(
+tk.Button(
     janela,
     text="PETS",
     font=("Arial", 14, "bold"),
-    width=20,
+    width=22,
     height=2,
+    bg=ROSA,
+    fg="white",
+    activebackground=ROSA_ESCURO,
+    activeforeground="white",
+    relief="flat",
+    cursor="hand2",
     command=abrir_pets
-)
-
-botao_pets.pack(pady=10)
+).pack(pady=10)
 
 
-# ==========================
+# ==============================
 # BOTÃO SERVIÇOS
-# ==========================
+# ==============================
 
-botao_servicos = tk.Button(
+tk.Button(
     janela,
     text="SERVIÇOS",
     font=("Arial", 14, "bold"),
-    width=20,
+    width=22,
     height=2,
+    bg=ROSA,
+    fg="white",
+    activebackground=ROSA_ESCURO,
+    activeforeground="white",
+    relief="flat",
+    cursor="hand2",
     command=abrir_servicos
-)
-
-botao_servicos.pack(pady=10)
+).pack(pady=10)
 
 
-# ==========================
+# ==============================
 # BOTÃO SAIR
-# ==========================
+# ==============================
 
-botao_sair = tk.Button(
+tk.Button(
     janela,
     text="SAIR",
     font=("Arial", 14, "bold"),
-    width=20,
+    width=22,
     height=2,
+    bg=ROSA,
+    fg="white",
+    activebackground=ROSA_ESCURO,
+    activeforeground="white",
+    relief="flat",
+    cursor="hand2",
     command=sair
-)
-
-botao_sair.pack(pady=10)
+).pack(pady=10)
 
 
-# ==========================
-# INICIAR JANELA
-# ==========================
+# ==============================
+# INICIAR SISTEMA
+# ==============================
 
 janela.mainloop()
